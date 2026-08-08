@@ -1,0 +1,27 @@
+# Copy this file to config.toml and fill in real credentials.
+# Re-running the program will APPEND all messages again (no dedup yet).
+# For Gmail: enable IMAP and use an App Password.
+
+output_file = "mail.txt"
+
+# Max bytes read when extracting a message body (default 2 MiB)
+max_body_bytes = 2097152
+
+[[accounts]]
+name = "work"
+host = "imap.example.com"
+port = 993
+username = "user@example.com"
+password = "secret"
+mailbox = "INBOX"
+# tls_mode: "tls" (implicit TLS, default) | "starttls" | "insecure"
+tls_mode = "tls"
+
+[[accounts]]
+name = "personal"
+host = "imap.gmail.com"
+port = 993
+username = "me@gmail.com"
+password = "app-password"
+mailbox = "INBOX"
+tls_mode = "tls"

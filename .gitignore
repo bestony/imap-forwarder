@@ -1,0 +1,19 @@
+# Local secrets and runtime output
+config.toml
+mail.txt
+.env
+
+# Build artifacts
+/imap-forwarder
+*.exe
+*.test
+*.out
+
+# Git lock used by automation
+.gitlock
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
